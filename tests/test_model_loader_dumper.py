@@ -1,9 +1,9 @@
 import pytest
 
-from json5.dumper import dumps
-from json5.dumper import ModelDumper
-from json5.loader import loads
-from json5.loader import ModelLoader
+from jsonfive.dumper import dumps
+from jsonfive.dumper import ModelDumper
+from jsonfive.loader import loads
+from jsonfive.loader import ModelLoader
 
 
 @pytest.mark.parametrize(

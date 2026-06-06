@@ -25,7 +25,7 @@ a very simple empty JSON object ``{}``
 
 .. code-block::
 
-    >>> from json5.tokenizer import tokenize
+    >>> from jsonfive.tokenizer import tokenize
     >>> json_string = "{}"
     >>> tokens = tokenize(json_string)
     >>> for token in tokens:
@@ -62,8 +62,8 @@ Let's start with the same simple example of an empty JSON object ``{}``
 
 .. code-block::
 
-    >>> from json5.tokenizer import tokenize
-    >>> from json5.parser import parse_tokens
+    >>> from jsonfive.tokenizer import tokenize
+    >>> from jsonfive.parser import parse_tokens
     >>> tokens = tokenize("{}")
     >>> model = parse_tokens(tokens)
     >>> model
@@ -93,7 +93,7 @@ You can also build model objects 'manually' without any source text.
 
 .. code-block::
 
-    from json5.model import *
+    from jsonfive.model import *
     model = JSONText(value=JSONObject(KeyValuePair(key=Identifier('bacon'), value=Infinity())))
 
 
@@ -109,8 +109,8 @@ default loader (the default loader is used when calling ``loads`` by default.
 
 .. code-block::
 
-    >>> from json5.loader import DefaultLoader
-    >>> from json5.model import *
+    >>> from jsonfive.loader import DefaultLoader
+    >>> from jsonfive.model import *
     >>> loader = DefaultLoader()
     >>> model = JSONText(value=JSONObject(KeyValuePair(key=Identifier('bacon'), value=Infinity())))
     >>> loader.load(model)
@@ -126,7 +126,7 @@ The default dumper dumps python objects directly to JSON text.
 
 .. code-block::
 
-    >>> from json5 import dumps
+    >>> from jsonfive import dumps
     >>> dumps(['foo', 'bar', 'baz'])
     '["foo", "bar", "baz"]'
 

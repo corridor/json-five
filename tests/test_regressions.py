@@ -1,7 +1,7 @@
 import pytest
 
-from json5 import JSON5DecodeError
-from json5 import loads
+from jsonfive import JSON5DecodeError
+from jsonfive import loads
 
 
 # These tests used to cause the program to hang indefinitely

@@ -2,15 +2,15 @@ import re
 
 import pytest
 
-from json5.dumper import DefaultDumper
-from json5.dumper import ModelDumper
-from json5.dumper import modelize
-from json5.loader import DefaultLoader
-from json5.loader import loads
-from json5.loader import ModelLoader
-from json5.model import Integer
-from json5.model import LineComment
-from json5.utils import JSON5DecodeError
+from jsonfive.dumper import DefaultDumper
+from jsonfive.dumper import ModelDumper
+from jsonfive.dumper import modelize
+from jsonfive.loader import DefaultLoader
+from jsonfive.loader import loads
+from jsonfive.loader import ModelLoader
+from jsonfive.model import Integer
+from jsonfive.model import LineComment
+from jsonfive.utils import JSON5DecodeError
 
 
 def test_loading_comment_raises_runtime_error_default_loader():

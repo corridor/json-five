@@ -2,10 +2,10 @@ import math
 
 import pytest
 
-from json5.dumper import dumps
-from json5.dumper import ModelDumper
-from json5.dumper import modelize
-from json5.loader import loads
+from jsonfive.dumper import dumps
+from jsonfive.dumper import ModelDumper
+from jsonfive.dumper import modelize
+from jsonfive.loader import loads
 
 
 @pytest.mark.parametrize(

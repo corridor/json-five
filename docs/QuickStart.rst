@@ -23,17 +23,17 @@ You can load this file to Python like so:
 
 .. code-block::
 
-   import json5
+   import jsonfive
    with open('my-json-file.json') as f:
-       data = json5.load(f)
+       data = jsonfive.load(f)
 
 You can also work directly with strings
 
 .. code-block::
 
-    import json5
+    import jsonfive
     json_string = '{json5 /* identifiers dont need quotes */: "values do though"}'
-    data = json5.loads(json_string)
+    data = jsonfive.loads(json_string)
 
 
 Want to do more? Check out :doc:`/extending` to dive deeper!

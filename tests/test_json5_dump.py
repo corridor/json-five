@@ -2,11 +2,11 @@ import json
 import math
 from io import StringIO
 
-from json5 import dump
-from json5 import dumps
-from json5.dumper import ModelDumper
-from json5.model import Integer
-from json5.model import UnaryOp
+from jsonfive import dump
+from jsonfive import dumps
+from jsonfive.dumper import ModelDumper
+from jsonfive.model import Integer
+from jsonfive.model import UnaryOp
 
 
 def test_json_dump_empty_object():

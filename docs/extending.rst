@@ -6,7 +6,7 @@ The ``json`` way
 ----------------
 
 
-``json5.load`` and ``json5.loads`` support a similar interface to the stdlib ``json`` module. Specifically,
+``jsonfive.load`` and ``jsonfive.loads`` support a similar interface to the stdlib ``json`` module. Specifically,
 you can provide the following arguments that have the same meaning as in ``json.load``:
 
 - ``parse_int``
@@ -47,13 +47,13 @@ Extending the default loader
 The default loader takes in a model and produces, in the default case, Python objects.
 
 As a simple example, you can extend the default loader with your own to customize loading of lists. Here,
-I'll create a custom loader that, when it encounters an array (``json5.model.JSONArray``) with with only one value, it will return
+I'll create a custom loader that, when it encounters an array (``jsonfive.model.JSONArray``) with with only one value, it will return
 the single value, rather than a single-item array.
 
 .. code-block::
 
-    from json5.loader import DefaultLoader, loads
-    from json5.model import JSONArray
+    from jsonfive.loader import DefaultLoader, loads
+    from jsonfive.model import JSONArray
 
 
     class MyCustomLoader(DefaultLoader):
@@ -91,7 +91,7 @@ JSON ``true`` or ``false``.
 
 .. code-block::
 
-    from json5.dumper import DefaultDumper, dumps
+    from jsonfive.dumper import DefaultDumper, dumps
 
     class MyCustomDumper(DefaultDumper):
         def dump(self, node):
@@ -121,12 +121,12 @@ with no additional processing.
 
 Besides the default dumper, there is also the ``ModelDumper`` which takes a model and serializes it to JSON.
 
-The ``json5.dumper.modelize`` function can take python objects and convert them to a model.
+The ``jsonfive.dumper.modelize`` function can take python objects and convert them to a model.
 
 
 .. code-block::
 
-    from json5.dumper import modelize
+    from jsonfive.dumper import modelize
     obj = ['foo', 123, True]
     modelize(obj)
 

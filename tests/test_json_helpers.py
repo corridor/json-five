@@ -1,5 +1,5 @@
-from json5.dumper import modelize
-from json5.model import Identifier
+from jsonfive.dumper import modelize
+from jsonfive.model import Identifier
 
 
 def test_identifier_can_hash_like_string():

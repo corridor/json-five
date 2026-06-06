@@ -8,9 +8,9 @@ any whitespace or comments that appear before or after the node.
 
 .. code-block::
 
-    from json5.loader import loads, ModelLoader
-    from json5.dumper import dumps, ModelDumper
-    from json5.model import BlockComment
+    from jsonfive.loader import loads, ModelLoader
+    from jsonfive.dumper import dumps, ModelDumper
+    from jsonfive.model import BlockComment
     json_string = """{"foo": "bar"}"""
     model = loads(json_string, loader=ModelLoader())
     print(model.value.key_value_pairs[0].value.wsc_before)  # [' ']

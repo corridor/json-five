@@ -4,12 +4,12 @@ from collections import namedtuple
 
 import pytest
 
-from json5 import dumps
-from json5 import JSON5DecodeError
-from json5 import load
-from json5 import loads
-from json5.dumper import ModelDumper
-from json5.loader import ModelLoader
+from jsonfive import dumps
+from jsonfive import JSON5DecodeError
+from jsonfive import load
+from jsonfive import loads
+from jsonfive.dumper import ModelDumper
+from jsonfive.loader import ModelLoader
 
 tests_path = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../json5-tests'))
 

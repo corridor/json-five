@@ -28,23 +28,20 @@ This project requires Python 3.8+
 
 # Usage
 
-**NOTE:** the import name is `json5` which differs from the install name.
-
-
 For basic loading/dumping, the interface is nearly identical to that of the `json` module.
 ```python
-import json5
+import jsonfive
 json_text = """{ // This is a JSON5 comment
 "foo": "bar", /* this is a JSON5 block
 comment that can span lines */
 bacon: "eggs"  // unquoted Identifiers also work
 }
 """
-print(json5.loads(json_text))
+print(jsonfive.loads(json_text))
 # {"foo": "bar", "bacon": "eggs"}
 
 with open('myfile.json5') as f:
-    data = json5.load(f)
+    data = jsonfive.load(f)
 ```
 
 For loading JSON5, the same parameters `object_hook`, `object_pairs_hook` and `parse_*` keyword arguments are available
@@ -58,7 +55,7 @@ This helps keep keys the same round-trip, rather than converting unquoted identi
 
 ```python
 >>> text = '{bacon: "eggs"}'
->>> json5.dumps(json5.loads(text)) == text
+>>> jsonfive.dumps(jsonfive.loads(text)) == text
 True
 ```
 
@@ -83,7 +80,7 @@ various use-cases, such as linters, formatters, custom serialization/deserializa
 Example: a simple model
 
 ```python
-from json5.loader import loads, ModelLoader
+from jsonfive.loader import loads, ModelLoader
 json_string = """{foo: "bar"}"""
 model = loads(json_string, loader=ModelLoader())
 ```
@@ -110,7 +107,7 @@ for more information.
 You can also leverage tokenization of JSON5:
 
 ```python
-from json5.tokenizer import tokenize
+from jsonfive.tokenizer import tokenize
 
 json_string = """{foo: "bar"}"""
 for tok in tokenize(json_string):

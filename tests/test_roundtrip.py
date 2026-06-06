@@ -1,5 +1,5 @@
-# from json5.loader import RoundTripLoader, loads
-# from json5.dumper import dumps, RoundTripDumper
+# from jsonfive.loader import RoundTripLoader, loads
+# from jsonfive.dumper import dumps, RoundTripDumper
 #
 #
 # def test_load_string():

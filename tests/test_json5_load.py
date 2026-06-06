@@ -3,9 +3,9 @@ from io import StringIO
 
 import pytest
 
-from json5.loader import JsonIdentifier
-from json5.loader import load
-from json5.loader import loads
+from jsonfive.loader import JsonIdentifier
+from jsonfive.loader import load
+from jsonfive.loader import loads
 
 
 def test_object_string_key_value_pair():
